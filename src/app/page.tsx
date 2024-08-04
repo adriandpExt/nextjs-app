@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 
-import { signOut, useSession } from "next-auth/react";
-import AuthButton from "./components/AuthButton";
+// import { signOut, useSession } from "next-auth/react";
+// import AuthButton from "./components/AuthButton";
 
 export default function Home() {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
   return (
     <main className="flex min-h-screen flex-col space-y-3">
@@ -30,6 +30,8 @@ export default function Home() {
             brought to you by vercel.
           </p>
 
+          <button className="btn btn-primary btn-sm">Signin</button>
+          {/*           
           {!session ? (
             <AuthButton
               label="Login"
@@ -43,12 +45,10 @@ export default function Home() {
             >
               Sign Out
             </button>
-          )}
+          )} */}
         </div>
 
         <div className="col-span-2 bg-slate-100 rounded-lg p-10">
-          {session?.user?.name}
-
           <Image
             src="/next.svg"
             width={1000}
